@@ -3,11 +3,13 @@
   <tr>
     <th>内容</th>
     <th>画像</th>
+    <th>詳細</th>
   </tr>
   <% @pictures.each do |picture| %>
     <tr>
       <td><%= picture.content %></td>
       <td><%= picture.image %></td>
+      <td><%= link_to "詳細画面", picture_path(picture.id) %></td>
     </tr>
   <% end %>
 </table>
