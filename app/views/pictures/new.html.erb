@@ -1,5 +1,14 @@
 <h1>新規投稿をする</h1>
 <%= form_with(model: @picture, local: true) do |form| %>
+  <% if @picture.errors.any? %>
+    <div class= "error_explanation" >
+    <h2><%= @picture.errors.count %>件のエラーがあります</h2>
+    <% @picture.errors.full_messages.each do |msg| %>
+      <%= msg %>
+    <% end %>
+    </div>
+  <% end %>
+
   <div class="picture_content">
     <%= form.label :content %>
     <%= form.text_field :content %>
