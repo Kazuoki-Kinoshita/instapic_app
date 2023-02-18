@@ -32,8 +32,13 @@ class PicturesController < ApplicationController
       render :edit
     end    
   end
-  
 
+  def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to pictures_path, notice: "投稿を削除しました！"
+  end
+  
   private
   def picture_params
     params.require(:picture).permit(:content, :image)
