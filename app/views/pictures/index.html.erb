@@ -10,7 +10,7 @@
   <% @pictures.each do |picture| %>
     <tr>
       <td><%= picture.content %></td>
-      <td><%= picture.image %></td>
+      <td><%= image_tag(picture.image.url) if picture.image.url %></td>
       <td><%= picture.user.user_name %></td>
       <td><%= link_to "詳細画面", picture_path(picture.id) %></td>
       <% if picture.user.id == current_user.id %>

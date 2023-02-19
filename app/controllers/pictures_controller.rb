@@ -6,7 +6,7 @@ class PicturesController < ApplicationController
   end
   
   def new
-    @picture = Picture.new 
+    @picture = Picture.new
   end
 
   def confirm
@@ -53,7 +53,7 @@ class PicturesController < ApplicationController
   private
   
   def picture_params
-    params.require(:picture).permit(:content, :image)
+    params.require(:picture).permit(:content, :image, :image_cache)
   end
 
   def set_picture
