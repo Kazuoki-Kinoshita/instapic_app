@@ -32,6 +32,9 @@ class PicturesController < ApplicationController
   end
   
   def edit
+    unless @picture.user_id == current_user.id
+      redirect_to pictures_path
+    end
   end
 
   def update
