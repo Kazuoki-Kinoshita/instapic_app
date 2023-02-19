@@ -1,4 +1,5 @@
+<p><%= notice %></p>
 <p>プロフィール写真：<%= @user.image %></p>
-<p>名前：<%= @user.full_name %></p>
 <p>ユーザーネーム：<%= @user.user_name %></p>
-<p>メールアドレス：<%= @user.email %></p>
+<%= link_to "プロフィール写真を編集", edit_user_path(@user.id)%>
+<p>名前：<%= @user.full_name %></p>

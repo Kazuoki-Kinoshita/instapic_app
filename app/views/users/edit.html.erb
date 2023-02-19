@@ -1,0 +1,33 @@
+<h1>プロフィールを編集</h1>
+<p><%= notice %></p>
+<%= form_with(model: @user, local: true) do |form| %>
+      <% if @user.errors.any? %>
+    <div class="error_explanation ">
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.label :image %>
+  <%= form.text_field :image %>
+  
+  <%= form.label :full_name %>
+  <%= form.text_field :full_name %>
+  
+  <%= form.label :user_name %>
+  <%= form.text_field :user_name %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+  
+  <%= form.label :password_confirmathion %>
+  <%= form.password_field :password_confirmathion %>
+  
+  <%= form.submit "送信する" %>
+<% end %>
