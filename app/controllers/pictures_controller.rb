@@ -51,6 +51,7 @@ class PicturesController < ApplicationController
     redirect_to pictures_path, notice: "投稿を削除しました！"
   end
   
+  
   private
   
   def picture_params
