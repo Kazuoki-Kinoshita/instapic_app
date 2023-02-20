@@ -2,6 +2,8 @@
 <p>プロフィール写真：<%= image_tag(@user.image.url) if @user.image.url %></p>
 <p>ユーザーネーム：<%= @user.user_name %></p>
 <p>名前：<%= @user.full_name %></p>
+<p>メールアドレス：<%= @user.email %></p>
+
 <% if current_user.id == @user.id %>
   <%= link_to "プロフィールを編集", edit_user_path(@user.id)%>
 <% end %>

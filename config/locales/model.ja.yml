@@ -5,13 +5,13 @@ ja:
       user: ユーザー
     attributes:
       picture:
-        image: 投稿画像
+        image: 投稿写真
         content: 内容
       user:
         user_name: ユーザーネーム
         full_name: フルネーム
         email: メールアドレス
+        image: プロフィール写真
         current_password: 現在のパスワード
         password: パスワード
         password_confirmation: 確認用パスワード
-        remember_me: ログインを記憶
