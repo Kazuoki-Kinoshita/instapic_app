@@ -16,6 +16,7 @@ class PicturesController < ApplicationController
 
   def create 
     @picture = current_user.pictures.build(picture_params)
+    ContactMailer.contact_mail(@picture).deliver
     if params[:back]
       render :new
     else
