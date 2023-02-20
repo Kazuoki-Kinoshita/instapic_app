@@ -11,21 +11,30 @@
   </head>
 
   <body>
+    <header class="header" >
+      <div class="top_menu">
+        <% if logged_in? %>
+          <div class="item"><%= link_to "新規投稿", new_picture_path %></div>
+          <div class="item"><%= link_to "投稿一覧", pictures_path %></div>
+          <div class="item"><%= link_to "お気に入り一覧", favorites_path %></div>
+          <div class="item"><%= link_to "プロフィール", user_path(current_user.id) %></div>
+          <div class="item"><%= link_to "ログアウト",  session_path(current_user.id), method: :delete %></div>
+        <% else %>
+          <div class="item">アカウントをお持ちでないですか？ <%= link_to "登録", new_user_path %></div>
+          <div class="item"><%= link_to "ログイン", new_session_path%></div>
+        <% end %>
+      </div>
+    </header>
+
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class:"#{key}") %>  
     <% end %>
 
-    <% if logged_in? %>
-      <%= link_to "新規投稿", new_picture_path %>
-      <%= link_to "投稿一覧", pictures_path %>
-      <%= link_to "お気に入り一覧", favorites_path %>
-      <%= link_to "プロフィール", user_path(current_user.id) %>
-      <%= link_to "ログアウト",  session_path(current_user.id), method: :delete %>
-    <% else %>
-      <%= link_to "アカウント作成", new_user_path %>
-      <%= link_to "ログイン", new_session_path%>
-    <% end %>
-
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+    <footer class="footer">
+      <p>Instapic inc.</p>
+    </footer>
   </body>
 </html>

@@ -11,18 +11,18 @@
     </div>
   <% end %>
 
-  <%= form.label :image %>
+  <p><%= form.label :image %></p>
   <%= form.file_field :image %>
   <%= image_tag(@user.image.url) if @user.image.url %>
   
-  <%= form.label :full_name %>
+  <p><%= form.label :full_name %></p>
   <%= form.text_field :full_name %>
   
-  <%= form.label :user_name %>
+  <p><%= form.label :user_name %></p>
   <%= form.text_field :user_name %>
 
-  <%= form.label :email %>
+  <p><%= form.label :email %></p>
   <%= form.email_field :email %>
 
-  <%= form.submit "送信する" %>
+  <p><%= form.submit "送信する" %></p>
 <% end %>
