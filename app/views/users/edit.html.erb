@@ -12,7 +12,8 @@
   <% end %>
 
   <%= form.label :image %>
-  <%= form.text_field :image %>
+  <%= form.file_field :image %>
+  <%= image_tag(@user.image.url) if @user.image.url %>
   
   <%= form.label :full_name %>
   <%= form.text_field :full_name %>
