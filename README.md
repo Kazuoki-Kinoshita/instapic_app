@@ -41,4 +41,4 @@ https://cacoo.com/diagrams/BuuQyis91N3eU0lV/47463
 ## ER図
 [Uploading er.png…]()
 ## 画面遷移図
-[diagram](https://user-images.githubusercontent.com/122067636/229758752-edb1df0b-a079-42ac-bf15-2b441909ed8f.png)
+![diagram](https://user-images.githubusercontent.com/122067636/229759840-438b2d34-ea2e-4c7c-9ba1-fe4009188931.png)
