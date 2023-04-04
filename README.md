@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 開発言語
+- Ruby 3.0.1
+- Rails 6.1.6
 
-Things you may want to cover:
+## 就業Termの技術
+- devise
+- rails_admin
+- cancancan
+- carrierwave
+- kaminari
+- フォロー機能
+- メッセージ機能
 
-* Ruby version
+## カリキュラム外の技術
+- Google map API
+- geocoder
+- ransack
+- simple_calendar
 
-* System dependencies
+## 実行手順
+```
+$git clone git@github.com:Kazuoki-Kinoshita/farm_link.git
+$cd farm_link
+$bundle install
+$yarn install
+$rails db:create && rails db:migrate
+$rails s
+```
 
-* Configuration
+## カタログ設計
+https://docs.google.com/spreadsheets/d/148I2Z3vRf-EKBWjTOgoPCv3j0jTmryozKNh3qZ6jUsk/edit#gid=1338661474
 
-* Database creation
+## テーブル定義書
+https://docs.google.com/spreadsheets/d/148I2Z3vRf-EKBWjTOgoPCv3j0jTmryozKNh3qZ6jUsk/edit#gid=2020033787
 
-* Database initialization
+## ワイヤーフレーム
+https://cacoo.com/diagrams/BuuQyis91N3eU0lV/47463
 
-* How to run the test suite
+## ER図
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 画面遷移図
